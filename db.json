@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Aditya Biswal",
+      "email": "adityabiswal@gmail.com",
+      "phone": 7038131072,
+      "address": "Bangalore"
+    },
+    {
+      "name": "Aditya Biswal",
+      "email": "adityabiswal@gmail.com",
+      "phone": "7777777777",
+      "address": "India",
+      "id": 2
+    },
+    {
+      "name": "Rohan Bajaj",
+      "email": "rohan.bajaj@gmail.com",
+      "phone": "8856841324",
+      "address": "Bangalore",
+      "id": 3
+    },
+    {
+      "name": "Keshav Murali",
+      "email": "keshav.murali@gmail.com",
+      "phone": "6666666666",
+      "address": "Delhi",
+      "id": 4
+    },
+    {
+      "name": "Saurav ",
+      "email": "saurav@gmail.com",
+      "phone": "3333333333",
+      "address": "Bangalore",
+      "id": 5
+    },
+    {
+      "name": "demo",
+      "email": "demo@gmail.com",
+      "phone": "8888888888",
+      "address": "haryana",
+      "id": 6
+    },
+    {
+      "name": "Rahul",
+      "email": "rahul@gmail.com",
+      "phone": "9999999999",
+      "address": "Bangalore",
+      "id": 7
+    }
+  ]
+}
