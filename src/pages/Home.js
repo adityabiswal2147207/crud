@@ -1,16 +1,16 @@
-import React,{useEffect, useState} from 'react';
+import React,{useEffect,useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteUsersStart, loadUsersStart } from '../redux/actions';
-import { Button, Table, Popconfirm } from 'antd';
+import {  Table} from 'antd';
 import { DeleteOutlined, EditOutlined } from '@ant-design/icons';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import '../App.css';
 import { toast } from 'react-toastify';
 
 const Home = () => {
     const dispatch = useDispatch();
     const {users} = useSelector(state => state.data);
-    const {userId} = useSelector(state => state.data)
+    //const {userId} = useSelector(state => state.data)
     const handleDelete = (id) => {
         dispatch(deleteUsersStart(id));
         if(window.confirm("Are you sure ?")){
@@ -50,7 +50,7 @@ const Home = () => {
             title:'Actions',
             render:(id)=>{
                 return <>
-                <DeleteOutlined onClick={handleDelete} style={{color:"red"}}/>
+                <DeleteOutlined onClick={()=>handleDelete(id)} style={{color:"red"}}/>
                 <EditOutlined style={{marginLeft:"12px"}} />
                 </>
             }

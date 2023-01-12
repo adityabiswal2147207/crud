@@ -31,12 +31,12 @@ export function* onCreateUserStartAsync({payload}){
     }
 }
 
-export function* onDeleteUserStartAsync(userId){
+export function* onDeleteUserStartAsync(usersId){
     try {
-        const response = yield call(deleteUserApi,userId);
+        const response = yield call(deleteUserApi,usersId);
         if(response.status === 200){
             yield delay(500);
-            yield put(deleteUsersSuccess(userId))
+            yield put(deleteUsersSuccess(usersId))
         }
     }
     catch(error){
@@ -46,8 +46,8 @@ export function* onDeleteUserStartAsync(userId){
 
 export function* onDeleteUsers(){
     while(true){
-        const {payload: userId} = yield take(types.DELETE_USERS_START);
-        yield call(onDeleteUserStartAsync, userId)
+        const {payload: usersId} = yield take(types.DELETE_USERS_START);
+        yield call(onDeleteUserStartAsync, usersId)
     }
 }
 

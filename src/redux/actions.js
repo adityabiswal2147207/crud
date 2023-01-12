@@ -28,14 +28,14 @@ export const createUsersError = (error) => ({
     payload:error
 })
 
-export const deleteUsersStart = (userId) => ({
+export const deleteUsersStart = (usersId) => ({
     type:types.DELETE_USERS_START,
-    payload:userId
+    payload:usersId
 })
 
-export const deleteUsersSuccess = (userId) => ({
+export const deleteUsersSuccess = (usersId) => ({
     type:types.DELETE_USERS_SUCCESS,
-    payload:userId
+    payload:usersId
 })
 
 export const deleteUsersError = (error) => ({
