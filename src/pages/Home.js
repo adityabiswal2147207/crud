@@ -57,7 +57,7 @@ const Home = () => {
               onClick={() => handleDelete(key)}
               style={{ color: "red" }}
             />
-         {/* <EditOutlined onClick={()=>navigate(`/AddEditUser/${key.id}`)} style={{ marginLeft: "12px", color:"green"}} /> */}
+            {/* <EditOutlined onClick={()=>navigate(`/AddEditUser/${key.id}`)} style={{ marginLeft: "12px", color:"green"}} /> */}
           </>
         );
       },

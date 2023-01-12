@@ -28,7 +28,7 @@ function App() {
         items={[
           { label: "Home", key: "/", icon: <HomeOutlined /> },
           // { label: "About", key: "/About", icon: <AndroidOutlined /> },
-          { label: "Add / Edit", key: "/AddEditUser", icon: <EditOutlined /> },
+          { label: "Add", key: "/AddEditUser", icon: <EditOutlined /> },
           // { label: "UserInfo", key: "/UserInfo", icon: <UserOutlined /> },
         ]}
       ></Menu>
