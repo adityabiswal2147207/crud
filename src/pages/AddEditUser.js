@@ -34,16 +34,29 @@ export default function AddEditUser() {
   };
   return (
     <div className='Form'>
-      <Form onSubmitCapture={handleSubmit}>
+      <Form onSubmitCapture={handleSubmit} labelCol={{span:10}} wrapperCol={{span:14}} >
         <p>Add User Detail</p>
         <div className='Details'>
-        <Input value={name} name="name" type='text' onChange={onInputChange} required aria-label='Name' placeholder='Enter Name'/>
-        <Input value={email} name="email" type='email' onChange={onInputChange} required aria-label='Email' placeholder='Enter Email'/>
-        <Input value={phone} name="phone" type='number' onChange={onInputChange} required aria-label='Phone' placeholder='Enter Mobile Number'/>
-        <Input value={address} name="address" type='text' onChange={onInputChange} required aria-label='address' placeholder='Enter your address'/>
+        <Form labelCol={{span:10}} wrapperCol={{span:14}}>
+          <Form.Item name="name" label="Name" rules={[{required:true,message:'Please enter your name'},{whitespace:true},{min:3},{max:30}]} hasFeedback >
+            <Input value={name} name="name" type='text' onChange={onInputChange} required aria-label='Name' placeholder='Enter Name'/>
+          </Form.Item>
+          <Form.Item name="email" label="Email" rules={[{required:true,message:'Please enter your email'},{type:'email',message:'Please Enter a Valid Email'}]}hasFeedback>
+          <Input value={email} name="email" type='email' onChange={onInputChange} required aria-label='Email' placeholder='Enter Email'/>
+          </Form.Item>
+          <Form.Item name="phone" label="Mobile No." rules={[{require:true,message:"Please enter your mobile number"},{max:10}]} hasFeedback>
+          <Input value={phone} name="phone" type='number' onChange={onInputChange} required aria-label='Phone' placeholder='Enter Mobile Number'/>
+          </Form.Item>
+          <Form.Item name='address' label="Address" rules={[{require:true,message:'Please enter your address'},{whitespace:true},{max:50}]}hasFeedback >
+          <Input value={address} name="address" type='text' onChange={onInputChange} required aria-label='address' placeholder='Enter your address'/>
+          </Form.Item>
+          <Form.Item wrapperCol={{span:24}} labelCol={{span:10}}>
+          <Button block type='primary' onClick={()=>handleSubmit()}>Add</Button>
+          <Button block onClick={()=>navigate("/")}>Go Back</Button>
+          </Form.Item>
+        </Form>
         <div className='Adduser'>
-          <Button onClick={()=>handleSubmit()}>Add</Button>
-          <Button onClick={()=>navigate("/")}>Go Back</Button>
+         
         </div>
         </div>
       </Form>

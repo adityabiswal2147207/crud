@@ -1,8 +1,8 @@
 import React from "react";
 import { Menu } from "antd";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import { ToastContainer} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import {
   AndroidOutlined,
@@ -19,7 +19,7 @@ function App() {
   const navigate = useNavigate();
   return (
     <div className="App" style={{ display: "flex", flexDirection: "row" }}>
-      <ToastContainer/>
+      <ToastContainer />
       <Menu
         theme="dark"
         onClick={({ key }) => {
@@ -27,9 +27,9 @@ function App() {
         }}
         items={[
           { label: "Home", key: "/", icon: <HomeOutlined /> },
-          { label: "About", key: "/About", icon: <AndroidOutlined /> },
+          // { label: "About", key: "/About", icon: <AndroidOutlined /> },
           { label: "Add / Edit", key: "/AddEditUser", icon: <EditOutlined /> },
-          { label: "UserInfo", key: "/UserInfo", icon: <UserOutlined /> },
+          // { label: "UserInfo", key: "/UserInfo", icon: <UserOutlined /> },
         ]}
       ></Menu>
       <Content />
@@ -43,8 +43,8 @@ function Content() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
-        <Route path="/AddEditUser" element={<AddEditUser/>}/>
-        <Route path="/UserInfo" element={<UserInfo/>}/>
+        <Route path="/AddEditUser" element={<AddEditUser />} />
+        {/* <Route path="/UserInfo" element={<UserInfo />} /> */}
       </Routes>
     </div>
   );
